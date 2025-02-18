@@ -13,11 +13,18 @@ Saya tertarik dalam pengembangan web dan pemrograman dengan fokus pada teknologi
 
 Saat ini, saya juga sedang **berfokus dan belajar dalam bidang Data Sains dan Data Analis**, termasuk analisis data, visualisasi data, serta penggunaan tools seperti **SQL, Python, dan Machine Learning**.  
 
-Saya percaya bahwa **"Keberanian Membawa Keberuntungan" (Fortis Fortuna Adiuvat)** dan **"Saya Dilahirkan untuk Hal yang Lebih Besar" (Ad Maiora Natus Sum)**.  
+Saya percaya bahwa:  
+- **"Keberanian Membawa Keberuntungan" (Fortis Fortuna Adiuvat)**  
+- **"Saya Dilahirkan untuk Hal yang Lebih Besar" (Ad Maiora Natus Sum)**  
+- **"Yakusa: Yakinkan dengan Iman, Usahakan dengan Ilmu, Sampaikan dengan Amal"**  
+
 Dengan keyakinan ini, saya selalu berusaha untuk **berani mengambil peluang** dan **terus berkembang menjadi versi terbaik dari diri saya**.  
 
 Selamat datang di blog saya yang berisi **proyek, dan cerita pengalaman pribadi**.  
 **Jangan ragu untuk berinteraksi!** Semoga konten di sini dapat memberikan **manfaat dan inspirasi** bagi para pembaca.  
+
+
+<img src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Wahyu Rusman" class="avatar">
 
 Terima kasih sudah berkunjung! 🚀
 
