@@ -1,6 +1,6 @@
 ---
 title: "Prediksi Konsumsi Listrik Ruangan"
-date: 2025-02-25
+date: 2025-02-20
 categories: [Machine Learning, Kaggle]
 tags: [Regresi Linear, Prediksi Konsumsi Listrik, Kaggle, Sistem Informasi]
 ---
