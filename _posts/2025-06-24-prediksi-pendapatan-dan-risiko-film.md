@@ -38,7 +38,7 @@ Proyek ini mengembangkan sistem Machine Learning untuk memprediksi pendapatan fi
 5.  [cite_start]**Penanganan Ketidakseimbangan Kelas:** Menggunakan SMOTETomek karena data ROI sangat tidak seimbang (42% Kerugian Ekstrem, 23% Kerugian Signifikan, 18% Keuntungan Marjinal, 12% Keuntungan Baik, dan hanya 5% Blockbuster).
 
 **Diagram Alur Kerja Sistem:**
-![Diagram Alur Kerja Sistem Prediksi ROI Film](assets/images/workflow.png)
+![Diagram Alur Kerja Sistem Prediksi ROI Film](/assets/images/workflow.png)
 [cite_start]*Diagram ini menunjukkan tahapan lengkap dari pengumpulan data hingga evaluasi model. *
 
 ---
@@ -51,7 +51,7 @@ Proyek ini mengembangkan sistem Machine Learning untuk memprediksi pendapatan fi
 * [cite_start]**Overfitting:** Ada sedikit *overfitting* karena performa pada data pelatihan jauh lebih tinggi ($R^{2} \approx 0,95-0,96$) dibandingkan data pengujian, menunjukkan model terlalu kompleks untuk generalisasi sempurna.
 
 **Plot Aktual vs Prediksi XGBoost Regressor:**
-![Plot Aktual vs Prediksi XGBoost Regressor](assets/images/apr_xgb.png)
+![Plot Aktual vs Prediksi XGBoost Regressor](/assets/images/apr_xgb.png)
 *Perbandingan Pendapatan Aktual dan Prediksi oleh XGBoost Regressor.*
 
 **Feature Importance (Regresi):**
@@ -59,9 +59,9 @@ Proyek ini mengembangkan sistem Machine Learning untuk memprediksi pendapatan fi
 * [cite_start]Fitur `budget` (anggaran produksi) dan `popularity` adalah kontributor paling dominan dalam memprediksi pendapatan film untuk kedua model.
 * [cite_start]`release_year`, `release_month`, dan `runtime` juga memiliki bobot yang signifikan.
 
-![Feature Importance Random Forest Regressor](assets/images/fi_rf.png)
+![Feature Importance Random Forest Regressor](/assets/images/fi_rf.png)
 *Top 15 Feature Importance - Random Forest Regressor.*
-![Feature Importance XGBoost Regressor](assets/images/fi_xgb.png)
+![Feature Importance XGBoost Regressor](/assets/images/fi_xgb.png)
 *Top 15 Feature Importance - XGBoost Regressor.*
 
 ### Performa Klasifikasi Risiko ROI
@@ -70,15 +70,15 @@ Proyek ini mengembangkan sistem Machine Learning untuk memprediksi pendapatan fi
 * [cite_start]**Tantangan:** Kategori `Marginal Profit` dan `Significant Loss` masih menjadi tantangan utama dengan F1-score rendah, kemungkinan karena distribusi data yang sangat tidak seimbang dan tumpang tindih karakteristik.
 
 **Confusion Matrix (Contoh XGBoost Classifier):**
-![Confusion Matrix XGBoost Classifier](assets/images/cf.png)
+![Confusion Matrix XGBoost Classifier](/assets/images/cf.png)
 *Confusion Matrix (Normalized & Raw Counts) untuk XGBoost Classifier.*
 
 **Feature Importance (Klasifikasi):**
 * Mirip dengan regresi, `vote_count` dan `budget` masih sangat penting, diikuti oleh genre dan tahun rilis.
 
-![Feature Importance Random Forest Classifier](assets/images/fi_rfc.png)
+![Feature Importance Random Forest Classifier](/assets/images/fi_rfc.png)
 *Top 10 Feature Importance - Random Forest Classifier.*
-![Feature Importance XGBoost Classifier](assets/images/fi_xgbc.png)
+![Feature Importance XGBoost Classifier](/assets/images/fi_xgbc.png)
 *Top 10 Feature Importance - XGBoost Classifier.*
 
 ---
@@ -94,8 +94,7 @@ Proyek ini mengembangkan sistem Machine Learning untuk memprediksi pendapatan fi
 ## Makalah Lengkap
 
 Untuk informasi lebih detail, Anda dapat mengunduh makalah penelitian lengkap kami:
-[Unduh Makalah (PDF)](assets/docs/Paper_Data_Mining.pdf)
-
+[Unduh Makalah (PDF)](/assets/docs/Paper_Data_Mining.pdf)
 ---
 
 ## Kontak
