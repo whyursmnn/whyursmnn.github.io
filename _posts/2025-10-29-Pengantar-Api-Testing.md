@@ -1,6 +1,8 @@
 # 🔗 Pengantar API Testing
 
-## 📘 Definisi: Apa itu API Testing
+---
+
+## 📘 1. Definisi: Apa itu API Testing
 **API Testing (Application Programming Interface Testing)** adalah proses pengujian yang berfokus pada **lapisan logika bisnis dan komunikasi antar komponen** dalam sebuah sistem, bukan pada tampilan antarmuka (UI).  
 API Testing memastikan bahwa endpoint yang disediakan oleh sistem **berfungsi sesuai spesifikasi**, mengembalikan **data yang benar**, dan **menangani error dengan baik**.
 
@@ -105,3 +107,4 @@ API dummy untuk latihan request-response.
     "email": "Shanna@melissa.tv"
   }
 ]
+```

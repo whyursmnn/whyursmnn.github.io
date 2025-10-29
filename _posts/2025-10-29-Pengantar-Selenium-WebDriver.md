@@ -1,5 +1,7 @@
 # 🧭 Pengantar Selenium WebDriver
 
+---
+
 ## 📘 1. Apa itu Selenium dan Apa itu Selenium WebDriver?
 
 ### 🧩 Apa itu Selenium?
@@ -7,10 +9,10 @@
 Dengan Selenium, penguji dapat membuat skrip otomatis yang menjalankan browser layaknya pengguna sungguhan — seperti membuka halaman web, mengisi form, menekan tombol, dan memverifikasi hasil yang ditampilkan.
 
 Selenium sendiri terdiri dari beberapa komponen utama:
-1. **Selenium IDE** → alat perekam otomatis berbasis browser.  
-2. **Selenium RC** → versi lama Selenium untuk remote control browser (sudah digantikan WebDriver).  
-3. **Selenium WebDriver** → API utama untuk otomatisasi browser modern.  
-4. **Selenium Grid** → digunakan untuk menjalankan pengujian paralel di beberapa browser dan platform.
+- **Selenium IDE** → alat perekam otomatis berbasis browser  
+- **Selenium RC** → versi lama Selenium untuk remote control browser (sudah digantikan WebDriver)  
+- **Selenium WebDriver** → API utama untuk otomatisasi browser modern  
+- **Selenium Grid** → digunakan untuk menjalankan pengujian paralel di beberapa browser dan platform
 
 ### 🔧 Apa itu Selenium WebDriver?
 **Selenium WebDriver** adalah komponen utama Selenium yang memungkinkan penguji **mengontrol browser secara langsung** melalui API tanpa perantara.  
@@ -26,48 +28,46 @@ Dengan WebDriver, kita dapat:
 
 Berikut alasan kenapa Selenium menjadi alat favorit untuk pengujian berbasis web:
 
-1. 💻 **Multi-Browser Support** – Mendukung Chrome, Firefox, Edge, Safari, dan Opera.  
-2. 🧩 **Multi-Language Support** – Bisa digunakan dengan Python, Java, JavaScript, C#, Ruby, dan Kotlin.  
-3. 🧠 **Mudah Dipelajari** – Sintaks sederhana dan dokumentasi lengkap.  
-4. ⚡ **Cross-Platform** – Dapat dijalankan di Windows, Linux, maupun macOS.  
-5. 🔁 **Integrasi CI/CD** – Mudah diintegrasikan dengan Jenkins, GitHub Actions, atau GitLab CI.  
-6. 💰 **Gratis dan Open Source** – Tidak berbayar dan terus diperbarui oleh komunitas besar.
+1. 💻 **Multi-Browser Support** – Mendukung Chrome, Firefox, Edge, Safari, dan Opera  
+2. 🧩 **Multi-Language Support** – Bisa digunakan dengan Python, Java, JavaScript, C#, Ruby, dan Kotlin  
+3. 🧠 **Mudah Dipelajari** – Sintaks sederhana dan dokumentasi lengkap  
+4. ⚡ **Cross-Platform** – Dapat dijalankan di Windows, Linux, maupun macOS  
+5. 🔁 **Integrasi CI/CD** – Mudah diintegrasikan dengan Jenkins, GitHub Actions, atau GitLab CI  
+6. 💰 **Gratis dan Open Source** – Tidak berbayar dan terus diperbarui oleh komunitas besar  
 
 ---
 
 ## ⚙️ 3. Instalasi Selenium dengan Bahasa Pemrograman Python
 
-Langkah-langkah instalasi Selenium dan WebDriver (contoh menggunakan Google Chrome):
+### 🧩 Langkah-langkah instalasi Selenium dan WebDriver (contoh menggunakan Chrome):
 
 ### 🧩 Langkah 1 – Pastikan Python dan pip sudah terpasang
 Cek versi Python dan pip di terminal atau command prompt:
 ```bash
 python --version
 pip --version
-Jika belum terpasang, unduh dan install dari https://www.python.org/downloads/.
+```
+Jika belum terpasang, unduh dan install dari [Python.org](https://www.python.org/downloads/).
 
-🧩 Langkah 2 – Instal Selenium Library
+### 🧩 Langkah 2 – Instal Selenium Library
 Jalankan perintah berikut di terminal:
-
-bash
-Copy code
+```bash
 pip install selenium
+```
 Perintah ini akan mengunduh dan memasang library Selenium ke lingkungan Python kamu.
 
-🧩 Langkah 3 – Unduh WebDriver (contoh: ChromeDriver)
+### 🧩 Langkah 3 – Unduh WebDriver (contoh: ChromeDriver)
 Cek versi Chrome kamu:
-Buka Chrome → chrome://settings/help
+- Buka Chrome → chrome://settings/help
 
 Unduh ChromeDriver yang sesuai versi di:
-🔗 https://chromedriver.chromium.org/downloads
+- [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 
-Ekstrak file dan letakkan di folder proyek atau path sistem (contoh: C:\chromedriver\chromedriver.exe).
+Ekstrak file dan letakkan di folder proyek atau path sistem (contoh: `C:\chromedriver\chromedriver.exe`).
 
-🧩 Langkah 4 – Uji Instalasi
-Buat file bernama test_selenium.py dan isi dengan kode berikut:
-
-python
-Copy code
+### 🧩 Langkah 4 – Uji Instalasi
+Buat file bernama `test_selenium.py` dan isi dengan kode berikut:
+```python
 from selenium import webdriver
 
 # Membuka browser Chrome
@@ -78,18 +78,18 @@ driver.get("https://www.google.com")
 
 # Menutup browser
 driver.quit()
+```
 Jalankan di terminal:
-
-bash
-Copy code
+```bash
 python test_selenium.py
+```
 ✅ Hasil: Browser Chrome akan terbuka secara otomatis dan memuat halaman Google.
 
-🌐 4. Open Browser dengan Selenium
-Contoh membuka browser dan mengatur ukuran jendela:
+---
 
-python
-Copy code
+## 4. Open Browser dengan Selenium
+Contoh membuka browser dan mengatur ukuran jendela:
+```python
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -97,25 +97,29 @@ driver.get("https://www.python.org")
 driver.maximize_window()  # Membesarkan jendela browser
 print("Judul Halaman:", driver.title)
 driver.quit()
-🧾 Output:
-
-vbnet
-Copy code
+```
+### 🧾 Output:
+```
 Judul Halaman: Welcome to Python.org
-🧩 5. Cara Berinteraksi dengan Elemen-elemen pada Halaman HTML
+```
+
+---
+
+## 5. Cara Berinteraksi dengan Elemen-elemen pada Halaman HTML
+
 Selenium dapat mencari elemen di halaman web menggunakan berbagai locator strategy.
 
-Metode Locator yang Umum Digunakan
-Locator	Contoh	Deskripsi
-By.ID	driver.find_element(By.ID, "user-name")	Berdasarkan atribut id
-By.NAME	driver.find_element(By.NAME, "password")	Berdasarkan atribut name
-By.XPATH	driver.find_element(By.XPATH, "//button[@id='login-button']")	Berdasarkan struktur XPath
-By.CSS_SELECTOR	driver.find_element(By.CSS_SELECTOR, ".btn_login")	Berdasarkan class CSS
-By.LINK_TEXT	driver.find_element(By.LINK_TEXT, "Login")	Berdasarkan teks hyperlink
+### Metode Locator yang Umum Digunakan
+| Locator | Contoh | Deskripsi |
+| --- | --- | --- |
+| `By.ID` | `driver.find_element(By.ID, "user-name")` | Berdasarkan atribut id |
+| `By.NAME` | `driver.find_element(By.NAME, "password")` | Berdasarkan atribut name |
+| `By.XPATH` | `driver.find_element(By.XPATH, "//button[@id='login-button']")` | Berdasarkan struktur XPath |
+| `By.CSS_SELECTOR` | `driver.find_element(By.CSS_SELECTOR, ".btn_login")` | Berdasarkan class CSS |
+| `By.LINK_TEXT` | `driver.find_element(By.LINK_TEXT, "Login")` | Berdasarkan teks hyperlink |
 
-Contoh Operasi Umum
-python
-Copy code
+### Contoh Operasi Umum
+```python
 from selenium.webdriver.common.by import By
 
 # Menulis teks ke input
@@ -127,11 +131,15 @@ driver.find_element(By.ID, "login-button").click()
 # Mengambil teks dari elemen
 message = driver.find_element(By.CLASS_NAME, "error-message-container").text
 print("Pesan Error:", message)
-💻 6. Contoh Interaksi (Live Coding) dengan Selenium WebDriver
-Berikut contoh sederhana login otomatis pada situs https://www.saucedemo.com:
+```
 
-python
-Copy code
+---
+
+## 6. Contoh Interaksi (Live Coding) dengan Selenium WebDriver
+
+Berikut contoh sederhana login otomatis pada situs [SauceDemo](https://www.saucedemo.com):
+
+```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -159,54 +167,57 @@ print("✅ Login Berhasil!")
 
 # Tutup browser
 driver.quit()
-🧾 Output di Terminal:
-
-pgsql
-Copy code
+```
+### 🧾 Output di Terminal:
+```
 ✅ Login Berhasil!
-🧪 7. Test Case dan Test Scenario
-📋 Test Scenario
-ID	Deskripsi	Tujuan
-TS-001	Verifikasi login berhasil dengan kredensial valid	Memastikan pengguna dapat login
-TS-002	Verifikasi login gagal dengan password salah	Memastikan sistem menampilkan pesan error
-TS-003	Verifikasi penambahan produk ke keranjang	Memastikan fungsi “Add to Cart” berjalan
+```
 
-🧾 Test Case
-Test Case 1: Login Berhasil
-Atribut	Nilai
-ID	TC-001
-Deskripsi	Login menggunakan username dan password valid
-Langkah Uji	1. Buka situs https://www.saucedemo.com
-2. Masukkan username: standard_user
-3. Masukkan password: secret_sauce
-4. Klik tombol login
-Hasil Diharapkan	Berhasil masuk ke halaman inventory.html
-Status	✅ Passed
+---
 
-Test Case 2: Login Gagal
-Atribut	Nilai
-ID	TC-002
-Deskripsi	Login dengan password salah
-Langkah Uji	1. Buka situs https://www.saucedemo.com
-2. Masukkan username: standard_user
-3. Masukkan password: wrong_pass
-4. Klik tombol login
-Hasil Diharapkan	Tampil pesan error “Epic sadface: Username and password do not match any user in this service”
-Status	✅ Passed
+## 7. Test Case dan Test Scenario
 
-Test Case 3: Tambah Produk ke Keranjang
-Atribut	Nilai
-ID	TC-003
-Deskripsi	Menambahkan produk ke keranjang setelah login
-Langkah Uji	1. Login ke sistem
-2. Klik “Add to cart” pada produk pertama
-3. Klik ikon keranjang
-Hasil Diharapkan	Produk tampil di halaman keranjang
-Status	✅ Passed
+### 📋 Test Scenario
+| ID | Deskripsi | Tujuan |
+| --- | --- | --- |
+| TS-001 | Verifikasi login berhasil dengan kredensial valid | Memastikan pengguna dapat login |
+| TS-002 | Verifikasi login gagal dengan password salah | Memastikan sistem menampilkan pesan error |
+| TS-003 | Verifikasi penambahan produk ke keranjang | Memastikan fungsi “Add to Cart” berjalan |
 
-💡 8. Contoh Implementasi Testing Lengkap
-python
-Copy code
+### 🧾 Test Case
+
+#### Test Case 1: Login Berhasil
+| Atribut | Nilai |
+| --- | --- |
+| ID | TC-001 |
+| Deskripsi | Login menggunakan username dan password valid |
+| Langkah Uji | 1. Buka situs https://www.saucedemo.com<br>2. Masukkan username: `standard_user`<br>3. Masukkan password: `secret_sauce`<br>4. Klik tombol login |
+| Hasil Diharapkan | Berhasil masuk ke halaman `inventory.html` |
+| Status | ✅ Passed |
+
+#### Test Case 2: Login Gagal
+| Atribut | Nilai |
+| --- | --- |
+| ID | TC-002 |
+| Deskripsi | Login dengan password salah |
+| Langkah Uji | 1. Buka situs https://www.saucedemo.com<br>2. Masukkan username: `standard_user`<br>3. Masukkan password: `wrong_pass`<br>4. Klik tombol login |
+| Hasil Diharapkan | Tampil pesan error “Epic sadface: Username and password do not match any user in this service” |
+| Status | ✅ Passed |
+
+#### Test Case 3: Tambah Produk ke Keranjang
+| Atribut | Nilai |
+| --- | --- |
+| ID | TC-003 |
+| Deskripsi | Menambahkan produk ke keranjang setelah login |
+| Langkah Uji | 1. Login ke sistem<br>2. Klik “Add to cart” pada produk pertama<br>3. Klik ikon keranjang |
+| Hasil Diharapkan | Produk tampil di halaman keranjang |
+| Status | ✅ Passed |
+
+---
+
+## 8. Contoh Implementasi Testing Lengkap
+
+```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -238,25 +249,27 @@ time.sleep(1)
 print("✅ Logout berhasil")
 
 driver.quit()
-🧾 Output di Terminal:
-
-Copy code
+```
+### 🧾 Output di Terminal:
+```
 ✅ Produk berhasil ditambahkan ke keranjang
 ✅ Logout berhasil
-🧠 9. Kesimpulan
-Selenium WebDriver adalah alat otomatisasi yang sangat kuat untuk melakukan pengujian antarmuka web secara efisien.
+```
+
+---
+
+## 9. Kesimpulan
+Selenium WebDriver adalah alat otomatisasi yang sangat kuat untuk melakukan pengujian antarmuka web secara efisien.  
 Dengan Selenium, penguji dapat:
+- Membuka browser dan menjalankan interaksi secara otomatis  
+- Melakukan pengujian regresi dan fungsional dengan cepat  
+- Mengurangi kesalahan manusia dalam pengujian manual  
+- Mengintegrasikan pengujian dengan pipeline DevOps modern
 
-Membuka browser dan menjalankan interaksi secara otomatis.
+---
 
-Melakukan pengujian regresi dan fungsional dengan cepat.
+## 10. Sumber Referensi
+- [Selenium Python Tutorial (with Example) | BrowserStack](https://www.browserstack.com/guide/selenium-python-tutorial)  
+- [WebDriver | Selenium](https://www.selenium.dev/documentation/webdriver/)  
 
-Mengurangi kesalahan manusia dalam pengujian manual.
-
-Mengintegrasikan pengujian dengan pipeline DevOps modern.
-
-📚 10. Sumber Referensi
-Selenium Python Tutorial (with Example) | BrowserStack
-
-WebDriver | Selenium
-
+---
